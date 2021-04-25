@@ -24,6 +24,7 @@
     "redux-devtools-extension": "^2.13.8",
     "redux-logger": "^3.0.6",
     "redux-thunk": "^2.3.0",
+    "styled-components": "^5.2.3",
     "typescript": "^3.9.7"
   },
   "scripts": {
@@ -53,6 +54,7 @@
     "@types/react-router": "^5.1.8",
     "@types/react-router-dom": "^5.1.6",
     "@types/redux-logger": "^3.0.8",
+    "@types/styled-components": "^5.1.9",
     "css-loader": "^5.0.0",
     "eslint-plugin-react-hooks": "^4.2.0",
     "style-loader": "^2.0.0"

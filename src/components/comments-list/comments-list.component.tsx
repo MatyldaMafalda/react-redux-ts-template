@@ -8,6 +8,9 @@ import { fetchCommentsAsync } from '../../redux/comment/comment.actions';
 
 import CommentItem from '../comment/comment-item.component';
 
+import { CommentsListContainer } from './comments-list.css';
+import { Spinner } from '../spinner/spinner.css';
+
 const CommentsList: React.FC = () => {
 	const dispatch = useDispatch();
 
@@ -23,20 +26,30 @@ const CommentsList: React.FC = () => {
 		}
 	}, [dispatch]);
 
-	if (loading) return <p>LOADING...</p>;
+	if (loading)
+		return (
+			<Spinner viewBox="0 0 50 50">
+				<circle
+					className="path"
+					cx="25"
+					cy="25"
+					r="20"
+					fill="none"
+					strokeWidth="3"
+				/>
+			</Spinner>
+		);
 
 	if (error) {
 		return <p>An error has occured while fetching comments: {error.message}</p>;
 	}
 
 	return (
-		<>
-			<div>
-				{commnets.map((comment) => (
-					<CommentItem comment={comment} key={comment.id} />
-				))}
-			</div>
-		</>
+		<CommentsListContainer>
+			{commnets.map((comment) => (
+				<CommentItem comment={comment} key={comment.id} />
+			))}
+		</CommentsListContainer>
 	);
 };
 
