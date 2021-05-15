@@ -65,7 +65,13 @@ export const Submit = styled.input.attrs({
 	outline: none;
 	transition: 0.15s;
 	text-align: center;
+
 	&:active {
+		background-color: ${palette.lightGrey200};
+	}
+
+	&:hover {
+		color: ${palette.darkGrey};
 		background-color: ${palette.lightGrey200};
 	}
 `;

@@ -1,8 +1,8 @@
 import { Route, Switch } from 'react-router-dom';
 import React from 'react';
 
-import CommentsPage from './pages/comments-page.component';
-import Homepage from './pages/homepage.component';
+import CommentsPage from './pages/comments-page/comments-page.component';
+import Homepage from './pages/homepage/homepage.component';
 import Header from './components/header/header.component';
 
 export const App: React.FC = () => {
