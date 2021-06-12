@@ -1,7 +1,7 @@
 import { Dispatch } from 'redux';
 import { LOADING_START, LOADING_STOP, UiActionTypes } from './ui.types';
 
-export const startLoading = (name: string, params: any[]) => {
+export const startLoading = (name: string) => {
 	return (dispatch: Dispatch<UiActionTypes>) => {
 		dispatch({
 			type: LOADING_START,
