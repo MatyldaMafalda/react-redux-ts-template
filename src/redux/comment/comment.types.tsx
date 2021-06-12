@@ -1,5 +1,5 @@
 import Comment from '../../types/Comment';
-export const FETCH_COMMENTS_START = 'FETCH_COMMENTS_START';
+
 export const FETCH_COMMENTS = 'FETCH_COMMENTS';
 export const FETCH_COMMENTS_FAILURE = 'FETCH_COMMENTS_FAILURE';
 export const ADD_COMMENT = 'ADD_COMMENT';

@@ -5,6 +5,7 @@ import { useDispatch } from 'react-redux';
 import { useAppSelector } from '../../redux/store';
 import { loaderCheck } from '../../redux/ui/ui.selectors';
 import { fetchCommentsAsync } from '../../redux/comment/comment.actions';
+import { FETCH_COMMENTS } from '../../redux/comment/comment.types';
 
 import CommentItem from '../comment/comment-item.component';
 
@@ -18,7 +19,7 @@ const CommentsList: React.FC = () => {
 	const commnets = useAppSelector((state) => state.comment.comments);
 	const error = useAppSelector((state) => state.comment.error);
 
-	const loading = loaderCheck(state, 'FETCH_COMMENTS');
+	const loading = loaderCheck(state, FETCH_COMMENTS);
 
 	useEffect(() => {
 		if (!commnets.length) {
