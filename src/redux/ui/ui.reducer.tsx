@@ -14,10 +14,7 @@ const initialUiState: UiState = {
 	},
 };
 
-const commentReducer = (
-	state = initialUiState,
-	action: UiActionTypes
-): UiState => {
+const uiReducer = (state = initialUiState, action: UiActionTypes): UiState => {
 	const { loader } = state;
 	const { actions } = loader;
 
@@ -40,4 +37,4 @@ const commentReducer = (
 	}
 };
 
-export default commentReducer;
+export default uiReducer;
